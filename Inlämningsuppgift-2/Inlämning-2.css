@@ -1,0 +1,28 @@
+body {
+    background-color: white;
+
+  }
+
+div1 {  
+  margin-left: 50%;
+  float: left;
+  width:950px;
+  height:450px;
+}
+
+div2 {
+  width:850px;
+  height:450px;
+}
+
+div3 {
+  margin-left: 50%;
+  float: left;
+  width:950px;
+  height:450px;
+}
+
+div4 {
+  width:650px;
+  height:450px;
+}
