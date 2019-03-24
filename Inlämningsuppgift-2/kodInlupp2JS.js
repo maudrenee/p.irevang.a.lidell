@@ -59,14 +59,15 @@
             counts[room_type_var[i]] = 1 + (counts[room_type_var[i]] || 0);
         }
         // räknar om värdet på counts till procent i pie chart
-        x_pie_procent = [counts["Entire home/apt"]/(counts["Entire home/apt"]+counts["Private room"]), 
-                        counts["Private room"]/(counts["Entire home/apt"]+counts["Private room"])];
+        x_pie_procent = [counts["Entire home/apt"]/(counts["Entire home/apt"]+counts["Private room"]+counts["Shared room"]), 
+                        counts["Private room"]/(counts["Entire home/apt"]+counts["Private room"]+counts["Shared room"]),
+                        counts["Shared room"]/(counts["Entire home/apt"]+counts["Private room"]+counts["Shared room"])];
         
-
+        document.write(counts["Shared room"]);
         // bestämmer värde och labels på objektet counts och lägger in i piechart
         var data_pie = [{
         values: x_pie_procent,
-        labels: ['Entire home/apt', 'Private room'],
+        labels: ['Entire home/apt', 'Private room', 'Shared room'],
         type: 'pie'
         }];
         // titeln på pie chart
