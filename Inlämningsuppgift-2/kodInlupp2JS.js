@@ -63,7 +63,6 @@
                         counts["Private room"]/(counts["Entire home/apt"]+counts["Private room"]+counts["Shared room"]),
                         counts["Shared room"]/(counts["Entire home/apt"]+counts["Private room"]+counts["Shared room"])];
         
-        document.write(counts["Shared room"]);
         // bestämmer värde och labels på objektet counts och lägger in i piechart
         var data_pie = [{
         values: x_pie_procent,
@@ -72,7 +71,8 @@
         }];
         // titeln på pie chart
         var layout_pie = {
-            title: "Pie Room"
+            title: "Pie Room",
+            autosize: true 
             
         }
         // hämtar pieplot diven och lägger på data, layout och plats på websidan
